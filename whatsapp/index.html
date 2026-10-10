@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membuka WhatsApp...</title>
+</head>
+<body>
+
+  <p>Mengarahkan ke WhatsApp AGNSTORE...</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const order =
+      params.get("order") || "";
+
+    const message =
+      "Halo Agnstore, saya membutuhkan bantuan terkait pesanan " +
+      order + ".";
+
+    const url =
+      "https://wa.me/6285155159128?text=" +
+      encodeURIComponent(message);
+
+    window.location.replace(url);
+  </script>
+
+</body>
+</html>
